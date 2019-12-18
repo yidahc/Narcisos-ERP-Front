@@ -12,7 +12,7 @@ class Table extends Component  {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     componentDidMount(){
-        axios.get('http://narcisos.herokuapp.com/transacciones')
+        axios.get('https://narcisos.herokuapp.com/transacciones')
         .then(res => {
           this.setState({
             data: res.data.pedidos,

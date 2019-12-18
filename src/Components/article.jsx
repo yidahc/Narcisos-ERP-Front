@@ -33,7 +33,7 @@ class Form extends Component  {
 
     handleSubmit(e){
         e.preventDefault();
-        axios.post('http://narcisos.herokuapp.com/new/articulo',this.state)
+        axios.post('https://narcisos.herokuapp.com/new/articulo',this.state)
             .then(response => console.log(response))
             .catch(err => alert(err))
             .then(this.setState({

@@ -19,14 +19,14 @@ class VentaForm extends Component  {
     }
 
     componentDidMount(){
-        axios.get('http://narcisos.herokuapp.com/articulos')
+        axios.get('https://narcisos.herokuapp.com/articulos')
         .then(res => {
           console.log(res.data.articulos)
           this.setState({
             productos: res.data.articulos,
           })
         })
-        axios.get('http://narcisos.herokuapp.com/clientes/activos')
+        axios.get('https://narcisos.herokuapp.com/clientes/activos')
         .then(resp => {
           console.log(resp.data.clientes)
           this.setState({
@@ -66,7 +66,7 @@ class VentaForm extends Component  {
     handleSubmit(e){
         e.preventDefault();
         let { cuenta, nota, articulos, monto} = this.state
-        axios.post('http://narcisos.herokuapp.com/new/pedido',
+        axios.post('https://narcisos.herokuapp.com/new/pedido',
             {
                 "cuenta": cuenta,
                 "typo": 'Venta',

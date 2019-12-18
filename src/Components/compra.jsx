@@ -19,14 +19,14 @@ class CompraForm extends Component  {
     }
 
     componentDidMount(){
-        axios.get('http://narcisos.herokuapp.com/articulos')
+        axios.get('https://narcisos.herokuapp.com/articulos')
         .then(res => {
           console.log(res.data.articulos)
           this.setState({
             productos: res.data.articulos,
           })
         })
-        axios.get('http://narcisos.herokuapp.com/proovedores/activos')
+        axios.get('https://narcisos.herokuapp.com/proovedores/activos')
         .then(resp => {
           console.log(resp.data.proovedores)
           this.setState({
@@ -66,7 +66,7 @@ class CompraForm extends Component  {
     handleSubmit(e){
         e.preventDefault();
         let { cuenta, nota, articulos, monto} = this.state
-        axios.post('http://narcisos.herokuapp.com/new/pedido',
+        axios.post('https://narcisos.herokuapp.com/new/pedido',
             {
                 "cuenta": cuenta,
                 "typo": 'Compra',

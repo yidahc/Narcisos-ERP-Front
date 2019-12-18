@@ -31,7 +31,7 @@ class ProovedorForm extends Component  {
     handleSubmit(e){
         e.preventDefault();
       let { email, nombre, direccion, telefono, celular, commentario } = this.state
-        axios.post('http://narcisos.herokuapp.com/new/cuenta',
+        axios.post('https://narcisos.herokuapp.com/new/cuenta',
             {
                 email,
                 nombre,
