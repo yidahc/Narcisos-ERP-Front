@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -10,13 +11,13 @@ function NavBar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-item nav-link active" href="/">Home <span className="sr-only">(current)</span></a>
-            <a className="nav-item nav-link" href="/proovedor/nuevo">Proovedor</a>
-            <a className="nav-item nav-link" href="/cliente/nuevo">Cliente</a>
-            <a className="nav-item nav-link" href="/articulo/nuevo">Producto</a>
-            <a className="nav-item nav-link" href="/compra/nueva">Compra</a>
-            <a className="nav-item nav-link" href="/venta/nueva">Venta</a>
-            <a className="nav-item nav-link disabled" href="/" tabIndex="-1" aria-disabled="true">Ventas</a>
+            <Link className="nav-item nav-link active" to="/">Home <span className="sr-only">(current)</span></Link>
+            <Link className="nav-item nav-link" to="/proovedor/nuevo">Proovedor</Link>
+            <Link className="nav-item nav-link" to="/cliente/nuevo">Cliente</Link>
+            <Link className="nav-item nav-link" to="/articulo/nuevo">Producto</Link>
+            <Link className="nav-item nav-link" to="/compra/nueva">Compra</Link>
+            <Link className="nav-item nav-link" to="/venta/nueva">Venta</Link>
+            <Link className="nav-item nav-link disabled" to="/" tabIndex="-1" aria-disabled="true">Ventas</Link>
           </div>
         </div>
       </nav>
