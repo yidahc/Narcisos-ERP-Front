@@ -11,7 +11,7 @@ import Table from './Components/table';
 import CompraForm from './Components/compra';
 import VentaForm from './Components/venta';
 import ProovedorForm from './Components/proovedor';
-import ClienteForm from './Components/cliente';
+import Cliente from './Pages/cliente';
 //import axios from 'axios';
 //import Home from './Pages/Home'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -45,7 +45,7 @@ class App extends Component {
               <ProovedorForm />
             </Route>
             <Route exact path="/cliente/nuevo">
-              <ClienteForm />
+              <Cliente />
             </Route>
             <Route exact path="/compra/nueva">
               <CompraForm />
